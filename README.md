@@ -1,4 +1,4 @@
-# Rick and Morty Wiki app using the Rick and Morty GraphQL API: https://rickandmortyapi.com/graphql
+# Rick and Morty Wiki app using the Rick and Morty GraphQL API.
 
 ## Live Demo:
 
@@ -8,3 +8,4 @@
 - React
 - React Router
 - Tailwind CSS
+- API : https://rickandmortyapi.com/graphql
