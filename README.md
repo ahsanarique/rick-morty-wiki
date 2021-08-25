@@ -1,6 +1,6 @@
 # Rick and Morty Wiki app using the Rick and Morty GraphQL API.
 
-## Live Demo:
+## Live Demo: TBA
 
 ## Technologies Used:
 
