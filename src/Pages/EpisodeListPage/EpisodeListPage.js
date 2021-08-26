@@ -1,13 +1,18 @@
 import React from "react";
-import Search from "../../Components/Search/Search";
+import NavigationBar from "../../Components/NavigationBar/NavigationBar";
+
 import EpisodeList from "../../Components/EpisodeList/EpisodeList";
+import Footer from "../../Components/Footer/Footer";
 
 const EpisodeListPage = () => {
   return (
-    <main>
-      <Search />
-      <EpisodeList />
-    </main>
+    <>
+      <NavigationBar />
+      <main>
+        <EpisodeList />
+      </main>
+      <Footer />
+    </>
   );
 };
 
