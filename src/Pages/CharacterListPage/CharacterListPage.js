@@ -1,6 +1,8 @@
+// Libraries
 import React, { useState, useEffect } from "react";
 import { useQuery, gql } from "@apollo/client";
 
+// Components
 import NavigationBar from "../../Components/NavigationBar/NavigationBar";
 import CharacterList from "../../Components/CharacterList/CharacterList";
 import Pagination from "../../Components/Pagination/Pagination";
