@@ -19,11 +19,11 @@ const SingleEpisode = ({ loading, error, data }) => {
       <h2 className="text-3xl text-center border-b-2 border-gray-200 mb-10 pb-4 w-full">
         Episode
       </h2>
-      <div className="flex flex-wrap justify-between w-3/4 mb-5">
+      <div className="flex flex-col sm:flex-row justify-between w-3/4 mb-5">
         <p className="text-2xl">{episode}:</p>
         <p className="text-2xl">{name}</p>
       </div>
-      <div className="flex flex-wrap justify-between w-3/4 mb-5">
+      <div className="flex flex-col sm:flex-row  justify-between w-3/4 mb-5">
         <p className="text-2xl">Air Date:</p>
         <p className="text-2xl">{air_date}</p>
       </div>
