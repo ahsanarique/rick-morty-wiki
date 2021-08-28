@@ -20,9 +20,15 @@ const NavigationBar = () => {
           </Link>
           <Link
             to="/episodeListPage"
-            className="text-gray-200 text-center text-lg font-medium italic hover:text-yellow-200"
+            className="text-gray-200 text-center text-lg font-medium italic mr-4 hover:text-yellow-200"
           >
             Episodes
+          </Link>
+          <Link
+            to="/locationListPage"
+            className="text-gray-200 text-center text-lg font-medium italic hover:text-yellow-200"
+          >
+            Locations
           </Link>
         </div>
       </nav>
