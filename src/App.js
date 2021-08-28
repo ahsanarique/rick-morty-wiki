@@ -39,7 +39,7 @@ function App() {
           <SingleEpisodePage />
         </Route>
 
-        <Route path="/singleLocationPage">
+        <Route path="/singleLocationPage=:id">
           <SingleLocationPage />
         </Route>
       </Switch>

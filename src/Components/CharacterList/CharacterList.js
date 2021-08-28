@@ -11,7 +11,9 @@ const CharacterList = ({ heading, loading, error, data }) => {
 
   const dataSet = data.characters
     ? data.characters.results
-    : data.episode.characters;
+    : data.episode
+    ? data.episode.characters
+    : data.location.residents;
 
   return (
     <section className="flex flex-col justify-center text-center text-gray-200 p-4">

@@ -7,7 +7,7 @@ const NavigationBar = () => {
       <nav className="flex justify-around">
         <Link
           to="/"
-          className="text-gray-200 text-center text-2xl font-medium italic"
+          className="text-gray-200 text-center text-2xl font-medium italic hover:text-yellow-200"
         >
           Rick and Morty Wiki
         </Link>

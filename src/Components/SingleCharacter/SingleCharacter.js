@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import LoadingMessage from "../LoadingMessage/LoadingMessage";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
@@ -46,10 +47,22 @@ const SingleCharacter = ({ loading, error, data }) => {
             Gender: <span className="ml-4">{gender}</span>
           </p>
           <p className="text-2xl font-medium italic">
-            Origin: <span className="ml-4">{originData.name}</span>
+            Origin:{" "}
+            <Link
+              to={`/singleLocationPage=${locationData.id}`}
+              className="ml-4 text-blue-300"
+            >
+              {originData.name}
+            </Link>
           </p>
           <p className="text-2xl font-medium italic">
-            Location: <span className="ml-4">{locationData.name}</span>
+            Location:{" "}
+            <Link
+              to={`/singleLocationPage=${locationData.id}`}
+              className="ml-4 text-blue-300"
+            >
+              {locationData.name}
+            </Link>
           </p>
           <p className="text-2xl font-medium italic">
             Species: <span className="ml-4">{species}</span>
