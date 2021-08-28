@@ -9,13 +9,17 @@ const CharacterList = ({ heading, loading, error, data }) => {
 
   if (error) return <ErrorMessage />;
 
+  const dataSet = data.characters
+    ? data.characters.results
+    : data.episode.characters;
+
   return (
     <section className="flex flex-col justify-center text-center text-gray-200 p-4">
       <h1 className="text-4xl border-b-2 border-gray-200 italic pb-4 mb-10">
         {heading}
       </h1>
       <div className="grid grid-cols-12 gap-4">
-        {data.characters.results.map((character) => (
+        {dataSet.map((character) => (
           <Link
             to={`/singleCharacterPage=${character.id}`}
             key={character.id}

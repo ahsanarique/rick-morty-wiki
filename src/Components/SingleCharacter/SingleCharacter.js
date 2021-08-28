@@ -1,54 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useQuery, gql } from "@apollo/client";
-import { useParams } from "react-router";
 
 import LoadingMessage from "../LoadingMessage/LoadingMessage";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import EpisodeList from "../EpisodeList/EpisodeList";
 
-const SingleCharacter = () => {
-  const { id } = useParams();
+const SingleCharacter = ({ loading, error, data }) => {
   const [characterData, setCharacterData] = useState({});
   const [originData, setOriginData] = useState({});
   const [locationData, setLocationData] = useState({});
-  const [episodeData, setEpisodeData] = useState([]);
-
-  const GET_SINGLE_CHARACTER = gql`
-    query singleChar {
-      character(id: ${id}) {
-        id
-        name
-        status
-        species
-        type
-        gender
-        origin {
-          id
-          name
-        }
-        location {
-          id
-          name
-        }
-        image
-        episode {
-          id
-          name
-        }
-        created
-      }
-    }
-  `;
-  const { loading, error, data } = useQuery(GET_SINGLE_CHARACTER);
-
-  console.log(data);
 
   useEffect(() => {
     if (data) {
       setCharacterData(data.character);
       setOriginData(data.character.origin);
       setLocationData(data.character.location);
-      setEpisodeData(data.character.episode);
     }
   }, [data]);
 
