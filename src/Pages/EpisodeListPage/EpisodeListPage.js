@@ -60,21 +60,21 @@ const EpisodeListPage = () => {
           error={error}
           data={data}
         />
+        {totalPage > 1 && (
+          <nav className="flex flex-wrap justify-center px-4 mt-10">
+            {paginateArray.map((page) => (
+              <Pagination
+                key={page}
+                page={page}
+                prev={prevPage}
+                next={nextPage}
+                setPageNum={setPageNum}
+              />
+            ))}
+          </nav>
+        )}
       </main>
 
-      {totalPage > 1 && (
-        <nav className="flex flex-wrap justify-center px-4 mt-10">
-          {paginateArray.map((page) => (
-            <Pagination
-              key={page}
-              page={page}
-              prev={prevPage}
-              next={nextPage}
-              setPageNum={setPageNum}
-            />
-          ))}
-        </nav>
-      )}
       <Footer />
     </>
   );
