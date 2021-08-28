@@ -39,4 +39,4 @@
 
 ### Single Location Page:
 
-![single location page](/screenshots/singleLocationPage)
+![single location page](/screenshots/singleLocationPage.png)
