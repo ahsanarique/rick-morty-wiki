@@ -48,21 +48,29 @@ const SingleCharacter = ({ loading, error, data }) => {
           </p>
           <p className="text-2xl font-medium italic">
             Origin:{" "}
-            <Link
-              to={`/singleLocationPage=${locationData.id}`}
-              className="ml-4 text-blue-300"
-            >
-              {originData.name}
-            </Link>
+            {originData.name !== "unknown" ? (
+              <Link
+                to={`/singleLocationPage=${locationData.id}`}
+                className="ml-4 text-blue-300"
+              >
+                {originData.name}
+              </Link>
+            ) : (
+              originData.name
+            )}
           </p>
           <p className="text-2xl font-medium italic">
             Location:{" "}
-            <Link
-              to={`/singleLocationPage=${locationData.id}`}
-              className="ml-4 text-blue-300"
-            >
-              {locationData.name}
-            </Link>
+            {locationData.name !== "unknown" ? (
+              <Link
+                to={`/singleLocationPage=${locationData.id}`}
+                className="ml-4 text-blue-300"
+              >
+                {locationData.name}
+              </Link>
+            ) : (
+              locationData.name
+            )}
           </p>
           <p className="text-2xl font-medium italic">
             Species: <span className="ml-4">{species}</span>
